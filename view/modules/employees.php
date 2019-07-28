@@ -1,3 +1,16 @@
+<?php
+
+session_start();
+
+if (!$_SESSION['login']) {
+        
+        header('Location:index.php?route=login');
+        
+        exit();
+}
+
+?>
+
 <br>
 <h1>Empleados</h1>
 
@@ -26,8 +39,8 @@
             <td>ale@hotmail.com</td>
             <td>Programador PHP</td>
             <td>$ 8.000</td>
-            <td><button>Editar</button></td>
-            <td><button>Borrar</button></td>
+            <td><button class="btn btn-success">Editar</button></td>
+            <td><button class="btn btn-danger">Borrar</button></td>
         </tr>
 
     </tbody>

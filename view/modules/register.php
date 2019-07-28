@@ -1,7 +1,20 @@
+<?php
+
+session_start();
+
+if (!$_SESSION['login']) {
+        
+        header('Location:index.php?route=login');
+        
+        exit();
+}
+
+?>
+
 <br>
 <h1>REGISTRAR UN EMPLEADO</h1>
 
-<form method="post" action="">
+<form method="POST" action="">
 
     <input type="text" placeholder="Nombre" name="nombre" required>
 

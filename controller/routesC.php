@@ -10,7 +10,7 @@ class RoutesController {
                 if (isset($_GET['route'])) {
                         $routes = $_GET['route'];
                 } else {
-                        $routes = index;
+                        $routes = "index";
                 }
                 
                 $res = Model::RoutesModel($routes);

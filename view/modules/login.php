@@ -3,11 +3,19 @@
 
 <form method="post" action="">
 
-    <input type="text" placeholder="Usuario" name="usuario" required>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Usuario" name="user" required>
+    </div>
 
-    <input type="password" placeholder="Contraseña" name="clave" required>
+    <div class="form-group">
+        <input type="password" class="form-control" placeholder="Contraseña" name="pass" required>
+    </div>
 
-    <input type="submit" value="Ingresar">
+    <input type="submit" class="btn btn-secondary" value="Ingresar">
 
 </form>
+
+<?php
+$login = new AdminC();
+$login->loginC();
 
