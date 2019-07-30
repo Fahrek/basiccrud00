@@ -40,7 +40,7 @@ class EmployeesC {
         $tblBD = "employees";
         $res = EmployeesM::ListEmployeesM($tblBD);
         
-        foreach ($res as $key => $value) {
+        foreach ($res as $value) {
             echo '<tr>
                     <td>'.$value['fname'].'</td>
                     <td>'.$value['lname'].'</td>
