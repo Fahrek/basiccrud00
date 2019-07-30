@@ -1,14 +1,12 @@
 <?php
-
 session_start();
 
 if (!$_SESSION['login']) {
-        
-        header('Location:index.php?route=login');
-        
-        exit();
-}
 
+    header('Location:index.php?route=login');
+
+    exit();
+}
 ?>
 
 <br>
@@ -16,17 +14,33 @@ if (!$_SESSION['login']) {
 
 <form method="POST" action="">
 
-    <input type="text" placeholder="Nombre" name="nombre" required>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nombre" name="fname" required>
+    </div>
+    
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Apellido" name="lname" required>
+    </div>
 
-    <input type="text" placeholder="Apellido" name="apellido" required>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Email" name="email" required>
+    </div>
 
-    <input type="email" placeholder="Email" name="email" required>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Puesto" name="position" required>
+    </div>
 
-    <input type="text" placeholder="Puesto" name="puesto" required>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Salario" name="salary" required>
+    </div>
 
-    <input type="text" placeholder="Salario" name="salario" required>
-
-    <input type="submit" value="Registrar">
-
+    <div class="form-group">
+        <input type="submit" class="btn btn-secondary" value="Registrar">
+    </div>
 </form>
+
+<?php 
+
+$register = new EmployeesC();
+$register -> EmployeesRegisterC();
 

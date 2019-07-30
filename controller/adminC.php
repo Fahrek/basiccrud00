@@ -7,7 +7,7 @@ class AdminC
         public function LoginC() {
                 if (isset($_POST['user'])) {
                         
-                      $dataC = array( 'user' => $_POST['user'], 'pass' => $_POST['pass'] );
+                      $dataC = ['user' => $_POST['user'], 'pass' => $_POST['pass']];
                       $tblDB = 'admin';
                       $res   = AdminM::LoginM($dataC, $tblDB);
                       

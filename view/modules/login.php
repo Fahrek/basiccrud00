@@ -1,7 +1,7 @@
 <br>
 <h1>INGRESAR</h1>
 
-<form method="post" action="">
+<form method="post">
 
     <div class="form-group">
         <input type="text" class="form-control" placeholder="Usuario" name="user" required>
@@ -17,5 +17,5 @@
 
 <?php
 $login = new AdminC();
-$login->loginC();
+$login -> loginC();
 

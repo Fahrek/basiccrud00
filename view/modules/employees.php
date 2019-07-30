@@ -33,15 +33,12 @@ if (!$_SESSION['login']) {
 
     <tbody>
 
-        <tr>
-            <td>Alejandro</td>
-            <td>Petrelli</td>
-            <td>ale@hotmail.com</td>
-            <td>Programador PHP</td>
-            <td>$ 8.000</td>
-            <td><button class="btn btn-success">Editar</button></td>
-            <td><button class="btn btn-danger">Borrar</button></td>
-        </tr>
+        
+        
+        <?php
+        $show = new EmployeesC();
+        $show -> ListEmployeesC();
+        ?>
 
     </tbody>
 
