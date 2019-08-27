@@ -10,28 +10,28 @@ if (!$_SESSION['login']) {
 ?>
 
 <br>
-<h1>REGISTRAR UN EMPLEADO</h1>
+<h1>REGISTRAR EMPLEADOS</h1>
 
-<form method="POST" action="">
+<form method="POST">
 
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Nombre" name="fname" required>
+        <input type="text" class="form-control" placeholder="Nombre" name="fnameR" required>
     </div>
     
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Apellido" name="lname" required>
+        <input type="text" class="form-control" placeholder="Apellido" name="lnameR" required>
     </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Email" name="email" required>
+        <input type="text" class="form-control" placeholder="Email" name="emailR" required>
     </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Puesto" name="position" required>
+        <input type="text" class="form-control" placeholder="Puesto" name="positionR" required>
     </div>
 
     <div class="form-group">
-        <input type="text" class="form-control" placeholder="Salario" name="salary" required>
+        <input type="text" class="form-control" placeholder="Salario" name="salaryR" required>
     </div>
 
     <div class="form-group">
@@ -42,5 +42,5 @@ if (!$_SESSION['login']) {
 <?php 
 
 $register = new EmployeesC();
-$register -> EmployeesRegisterC();
+$register -> CreateEmployeesC();
 

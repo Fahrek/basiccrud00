@@ -1,6 +1,4 @@
-<?php
-
-session_start();
+<?php session_start();
 
 if (!$_SESSION['login']) {
         
@@ -33,15 +31,16 @@ if (!$_SESSION['login']) {
 
     <tbody>
 
-        
-        
         <?php
         $show = new EmployeesC();
-        $show -> ListEmployeesC();
+        $show -> ReadEmployeesC();
         ?>
 
     </tbody>
 
 </table>
 
+<?php
 
+$delete = new EmployeesC();
+$delete -> DeleteEmployeesC();
